@@ -17,6 +17,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import org.json.JSONObject;
@@ -26,6 +27,8 @@ import org.json.JSONTokener;
  *
  * @author eduardo
  */
+
+// TODO: Make a JFrame to POST things into the database
 public class JFrame extends javax.swing.JFrame {
 
     /**
@@ -268,7 +271,7 @@ public class JFrame extends javax.swing.JFrame {
             con.disconnect();
 
         } catch (Exception e) {
-            System.out.println("Bad url");
+            JOptionPane.showMessageDialog(null, e.getClass());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -319,7 +322,7 @@ public class JFrame extends javax.swing.JFrame {
             
 
         } catch (Exception e) {
-            System.out.println("Bad url");
+            JOptionPane.showMessageDialog(null, e.getClass());
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
